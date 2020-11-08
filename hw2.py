@@ -1,12 +1,12 @@
 
-def func1():
-    a=[1, 2, True, False, (1, 2), 'string', 1.0]
+def func1(*elem):
+    a=[*elem]
     typelist = []
     for i in a:
         b = type(i)
         typelist.append(b)
     print(typelist)
-func1()
+func1(1, 2, True, False, (1, 2), 'string', 1.0)
 
 def func2():
     n = input('Введите значения списка, через запятую  ",":').split(',')
