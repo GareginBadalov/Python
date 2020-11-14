@@ -1,7 +1,5 @@
 def func1(n1=int(input('Введите число')), n2=int(input('Введите число'))):
-
-
-    if n2==0:
+    if n2 == 0:
         print('На ноль делить нельзя, запустите функцию еще раз')
     else:
         return n1/n2
@@ -11,10 +9,10 @@ print(func1())
 
 
 def func2(**data):
-    string=''
+    string = ''
     for key, value in data.items():
-        string+=value
-        string+=', '
+        string += value
+        string += ', '
     return string
 
 
@@ -28,15 +26,15 @@ def func3(n1, n2, n3):
     return a+b
 
 
-print(func3(1,250,0))
+print(func3(1, 250, 0))
 
 
 def func4(x=float(input('Введите дробь')), y=int(input('Введите целое чило'))):
     print(x**y)
-    a=x
-    b=0
-    for i in range(0,y-1,1):
-        x*=a
+    a = x
+    b = 0
+    for i in range(0, y-1, 1):
+        x *= a
     return x
 
 
@@ -64,8 +62,6 @@ def func5():
         for i in l2:
             i = int(i)
             s += i
-
-
     return s
 
 
@@ -73,17 +69,20 @@ print(func5())
 
 
 def func6(s):
-    s=s.capitalize()
+    s = s.capitalize()
     return s
 
+
 print(func6('сегодня'))
+
+
 def func6_1(s1):
-    s1=s1.split()
-    b=''
+    s1 = s1.split()
+    b = ''
     for i in s1:
-        a=func6(i)
-        b+=a
-        b+=" "
+        a = func6(i)
+        b += a
+        b += " "
     return b
 
 
