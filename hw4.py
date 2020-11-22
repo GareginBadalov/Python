@@ -41,16 +41,15 @@ print(reduce(func5, [x for x in range(100, 1001) if x % 2 == 0]))
 
 
 def func6_1(a):
-    b=[]
     for i in count(a):
-        if i > 10:
+        if i > 15:
             break
         else:
-            b.append(i)
-    return b
+            yield i
 
 
-print(func6_1(3))
+for i in func6_1(7):
+    print(i)
 
 
 def func6_2():
@@ -59,12 +58,13 @@ def func6_2():
     for a in cycle([1, 2, 3]):
         if c > 8:
             break
-        b.append(a)
-        c += 1
-    return b
+        else:
+            c += 1
+            yield a
 
 
-print(func6_2())
+for i in func6_2():
+    print(i)
 
 
 def func7(n):
